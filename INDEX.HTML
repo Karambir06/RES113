@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <LINK rel="STYLESHEET" href="STYLE.CSS">
+  <style>
+    h1 {
+      text-align: center;
+      padding-top: 200px;
+      font-size: 150px;
+      text-transform: capitalize;
+      font-style: italic;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: rgb(203, 136, 63);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .cta-button {
+      background: #f39c12;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .menu {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .menu-item {
+      margin: 20px 0;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: rgba(51, 51, 51, 0.9);
+        top: 60px;
+        right: 0;
+        width: 100%;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        display: block;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .menu-item {
+        flex: 1;
+        margin: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <img src="IMG_20221227_142651_009.jpg" width="50px">
+        <li><a href="about.HTML">Contact us</a></li>
+        <li><a href="dishes.HTML">Dishes</a></li>
+        <li><a href="menu page.HTML">Learn</a></li>
+        <li><a href="INDEX.HTML">Home</a></li>
+      </ul>
+  </header>
+  <section class="hero">
+    <video autoplay muted loop class="background-video">
+      <source src="mixkit-ingredients-to-prepare-ceviche-3793-full-hd.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Welcome to 3d-Studio</h1>
+      <p>Indulge in our exquisite cuisine and delightful atmosphere.</p>
+
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Our Learning Highlights</h2>
+    <div class="menu-item">
+      <h3>Grilled Steak</h3>
+      <p>Perfectly cooked steak with a side of seasonal vegetables.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Fresh Seafood</h3>
+      <p>Daily caught seafood prepared with the finest ingredients.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Vegan Delight</h3>
+      <p>A delicious plant-based dish full of flavor and nutrition.</p>
+    </div>
+  </section>
+  <footer>
+    <nav class="navbar">
+      <ul>
+        <li>&copy;3d-Studio-All Rights Reserved</li>
+
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dish Registration</title>
+  <link rel="stylesheet" href="STYLE.CSS">
+  <style>
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 30px;
+      margin: 20px;
+      text-align: center;
+      color: #e67e22;
+    }
+
+
+    main {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .submit-button {
+      background: #f39c12;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #e67e22;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <img src="IMG_20221227_142651_009.jpg" width="50px">
+          <li><a href="about.HTML">Contact us</a></li>
+          <li><a href="dishes.HTML">Dishes</a></li>
+          <li><a href="menu page.HTML">Menu</a></li>
+          <li><a href="INDEX.HTML">Home</a></li>
+        </ul>
+    </header>
+
+
+    <h1>COME UP TO ADD YOUR DISH</h1>
+    <main>
+      <form id="dish-form">
+        <div class="form-group">
+          <label for="name">Dish Name:</label>
+          <input type="text" id="name" name="dish-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="ingredients">Ingredients:</label>
+          <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price ($):</label>
+          <input type="number" id="price" name="price" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image URL:</label>
+          <input type="url" id="image" name="image" required>
+        </div>
+
+        <button type="submit" class="submit-button">Register Dish</button>
+      </form>
+    </main>
+
+
+
+    <script>
+
+
+      function validation() {
+        let isValid = true;
+        if (doucment.getElementById("name").value == "") {
+          document.getElementById("name").innerText = "NAME SHOULD BE IN ALPHABET";
+          isValid = false
+        }
+        else {
+          document.getElementById("name").innerText = "";
+        }
+        if (doucment.getElementById("email").value == "") {
+          document.getElementById("erroemail").innerText = "EMAIL SHOULD BE IN ALPHABET and NUMBERS";
+          isValid = false
+        }
+        else {
+          document.getElementById("Erroremail").innerText = "";
+        }
+        if (doucment.getElementById("cities").value == "") {
+          document.getElementById("errorcities").innerText = "CITIES SHOULD BE IN ALPHABET";
+          isValid = false
+        }
+        else {
+          document.getElementById("Errorcities").innerText = "";
+        }
+      }
+
+    </script>
+</body>
+
+
+<footer>
+  <nav class="navbar">
+    <ul>
+      <li>&copy;3d-Studio-All Rights Reserved</li>
+
+    </ul>
+  </nav>
+</footer>
+</html>
